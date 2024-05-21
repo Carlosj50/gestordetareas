@@ -17,5 +17,3 @@ def menu():
     print ((f'\033[1;35m {separadores}\033[1;34m  5. {menus[4]}\033[1;35m  {separadores}').center(107,' '))
     print (('\033[1;35m      ' + separadores * 27 + '\33[;0m').center(93,' ')) 
 
-titulo()
-menu()
