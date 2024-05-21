@@ -1,31 +1,28 @@
 import funciones as fn
-from menu import *
+import menu as mn
+from os import system
 
 #titulo y menu
 def inicio():
     while True:
-        titulo()
-        menu()
+        system('cls')
+        mn.titulo()
+        mn.menu()
         opciones(opciones)
 #opciones con match
 def opciones(opcion):
-    opcion = input('Selecione una opción del menu: \n')
+    opcion = input('\033[;33m' +'Selecione una opción del menu: \n' + '\33[;36m')
     match opcion:
         case '1':
-            print ('Añadir tarea')
+            fn.agregar_tareas(fn.tareas)
         case '2':
-            print ('Ver Tareas')
+            fn.ver_tareas(fn.tareas)
         case '3':
-            print ('Completar Tareas')
+            fn.completar_tareas(fn.tareas)
         case '4':
-            print ('Eliminar tarea')
+            fn.eliminar_tarea(fn.tareas)
         case '5':
-            salir = input ('Va a salir del programa. ¿Está seguro? s/n \n')
-            if salir == 's':
-                print ('Adios')
-                exit()
-            else:
-                inicio()
+            fn.salir()
         case _:
             print ('no has puesto una opcion valida')
 inicio()
