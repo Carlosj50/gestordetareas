@@ -1,5 +1,5 @@
 #lista de tareas
-tareas = ['tarea 1','tarea 2','tarea 3','tarea 4','tarea 5','tarea 6']
+tareas = []
 
 
 def agregar_tareas(lista):
@@ -62,18 +62,21 @@ def completar_tareas(lista):
 def eliminar_tarea(lista):
     # llamamos a la funcion ver_tareas()
     ver_tareas(lista)
-    # Entrada para que el usuario introduzca una tarea
-    eliminar = int(input('Introduzca el número de la tarea que quiere eliminar:\n'))
-    # condicional para marcar como tarea finalizada.
-    if eliminar > 0 and eliminar <= len(lista):
-        #se elimina la tarea indicada.
-        indice = eliminar - 1
-        tarea_eliminada = lista[indice]
-        del lista[indice]  
-        print (f'La tarea {tarea_eliminada} fue eliminada con exito')
-    # Avisar si la opcion es incorrecta.
+    if len(lista) == 0:
+        pass
+        # Entrada para que el usuario introduzca una tarea
     else:
-        print ('No hay ninguna tarea con ese número')
+        eliminar = int(input('Introduzca el número de la tarea que quiere eliminar:\n'))
+        # condicional para marcar como tarea finalizada.
+        if eliminar > 0 and eliminar <= len(lista):
+            #se elimina la tarea indicada.
+            indice = eliminar - 1
+            tarea_eliminada = lista[indice]
+            del lista[indice]  
+            print (f'La tarea {tarea_eliminada} fue eliminada con exito')
+        # Avisar si la opcion es incorrecta.
+        else:
+            print ('No hay ninguna tarea con ese número')
 
 
 def salir():
