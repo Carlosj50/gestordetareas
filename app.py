@@ -15,16 +15,40 @@ def opciones(opcion):
     match opcion:
         case '1':
             system('cls')
+            #Titulo
+            print (('\033[1;32m' + '*' * 27 + '\33[;0m').center(100,' '))
+            print (('\033[1;31m' + 'Agregar Tarea' + '\33[;0m').center(100,' '))
+            print (('\033[1;32m' + '*' * 27 + '\33[;0m').center(100,' '))
             fn.agregar_tareas(fn.tareas)
+            #fin de la funcion
+            input ('\33[;40;37mpulse una tecla\33[;0m')
         case '2':
             system('cls')
+            #Titulo
+            print (('\033[1;32m' + '*' * 27 + '\33[;0m').center(100,' '))
+            print (('\033[1;31m' + 'Ver Tarea' + '\33[;0m').center(100,' '))
+            print (('\033[1;32m' + '*' * 27 + '\33[;0m').center(100,' '))
             fn.ver_tareas(fn.tareas)
+            #fin de la funcion
+            input ('\33[;40;37mpulse una tecla\33[;0m')
         case '3':
             system('cls')
+            #Titulo
+            print (('\033[1;32m' + '*' * 27 + '\33[;0m').center(100,' '))
+            print (('\033[1;31m' + 'Completar Tarea' + '\33[;0m').center(100,' '))
+            print (('\033[1;32m' + '*' * 27 + '\33[;0m').center(100,' '))
             fn.completar_tareas(fn.tareas)
+            #fin de la funcion
+            input ('\33[;40;37mpulse una tecla\33[;0m')
         case '4':
             system('cls')
+            #Titulo
+            print (('\033[1;32m' + '*' * 27 + '\33[;0m').center(100,' '))
+            print (('\033[1;31m' + 'Eliminar Tarea' + '\33[;0m').center(100,' '))
+            print (('\033[1;32m' + '*' * 27 + '\33[;0m').center(100,' '))
             fn.eliminar_tarea(fn.tareas)
+            #fin de la funcion
+            input ('\33[;40;37mpulse una tecla\33[;0m')
         case '5':
             system('cls')
             fn.salir()
